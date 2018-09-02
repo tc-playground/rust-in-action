@@ -4,7 +4,7 @@ fn greet_world() {
     let japan = "ハロー・ワールド"; 
     let regions = [southern_germany, japan];
     for region in regions.iter() {
-            println!("{}", &region);
+        println!("{}", &region);
     }
 }
 

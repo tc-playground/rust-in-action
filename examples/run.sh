@@ -6,7 +6,6 @@ function compile_run_clean() {
         echo "No terget was speicifed."
         exit 1
     fi
-    echo $target
     local binary=${target%.rs}
     rustc "${target}"
     ./${binary}
