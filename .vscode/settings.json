@@ -5,8 +5,11 @@
         "entrypoint",
         "macos",
         "nostartfiles",
+        "redzone",
         "rustc",
         "rustflags",
-        "thumbv"
+        "thumbv",
+        "tkern",
+        "xbuild"
     ]
 }
