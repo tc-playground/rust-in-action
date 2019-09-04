@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
         "LLVM",
+        "bootimage",
+        "bootloader",
         "eabihf",
         "entrypoint",
         "macos",
@@ -10,6 +12,7 @@
         "rustflags",
         "thumbv",
         "tkern",
-        "xbuild"
+        "xbuild",
+        "xrun"
     ]
 }
