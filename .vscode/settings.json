@@ -3,6 +3,8 @@
         "LLVM",
         "Multiboot",
         "UEFI",
+        "alloc",
+        "androideabi",
         "bootable",
         "bootimage",
         "bootloader",
