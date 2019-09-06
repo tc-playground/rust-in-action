@@ -149,8 +149,19 @@
 
 * The [`bootimage`](https://github.com/rust-osdev/bootimage) links the `bootloader` crate to an executable.
 
+    1. Compiles kernel into an [ELF](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format) file.
 
+    2. It compiles the bootloader dependency as a standalone executable.
 
+    3. It links the bytes of the kernel ELF file to the bootloader.
+
+* Run directly in [`QEMU`](https://www.qemu.org/)
+
+    1. `qemu-system-x86_64 -drive format=raw,file=target/x86_64-tkern/debug/bootimage-tkern.bin`
+
+* Run from a real USB
+
+    1. `dd if=target/x86_64-tkern/debug/bootimage-tkern.bin of=/dev/usb-driver && sync`
 
 ---
 
