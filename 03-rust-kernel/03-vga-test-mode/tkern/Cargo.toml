@@ -2,6 +2,7 @@
 name = "tkern"
 version = "0.1.0"
 authors = ["Tim Langford <tim.langford@gmail.com>"]
+edition = "2018"
 
 [profile.dev]
 panic = "abort"
@@ -10,5 +11,6 @@ panic = "abort"
 panic = "abort"
 
 [dependencies]
+volatile = "0.2.6"
 bootloader = "0.6.4"
 
