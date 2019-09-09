@@ -14,3 +14,6 @@ panic = "abort"
 volatile = "0.2.6"
 bootloader = "0.6.4"
 
+[dependencies.lazy_static]
+version = "1.0"
+features = ["spin_no_std"]
