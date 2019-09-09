@@ -49,12 +49,20 @@ impl ColorCode {
 //     buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
 // };
 use lazy_static::lazy_static;
+// lazy_static! {
+//     pub static ref WRITER: Writer = Writer {
+//         column_position: 0,
+//         color_code: ColorCode::new(Color::Yellow, Color::Black),
+//         buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
+//     };
+// }
+use spin::Mutex;
 lazy_static! {
-    pub static ref WRITER: Writer = Writer {
+    pub static ref WRITER: Mutex<Writer> = Mutex::new(Writer {
         column_position: 0,
         color_code: ColorCode::new(Color::Yellow, Color::Black),
         buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
-    };
+    });
 }
 
 
@@ -163,25 +171,25 @@ impl Writer {
     }
 }
 
-pub fn print_something() {
-    // let mut writer = Writer {
-    //     column_position: 0,
-    //     color_code: ColorCode::new(Color::Yellow, Color::Black),
-    //     buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
-    // };
-    // writer.write_byte(b'H');
-    // writer.write_string("Hello ");
-    // writer.write_string("Tkern!");
-
-    use core::fmt::Write;
-    let mut writer = Writer {
-        column_position: 0,
-        color_code: ColorCode::new(Color::Yellow, Color::Black),
-        buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
-    };
-
-    writer.write_byte(b'H');
-    writer.write_string("Wotcha! ");
-    write!(writer, "The numbers are {} and {}", 42, 1.0/3.0).unwrap();    
-}
+// pub fn print_something() {
+//     // let mut writer = Writer {
+//     //     column_position: 0,
+//     //     color_code: ColorCode::new(Color::Yellow, Color::Black),
+//     //     buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
+//     // };
+//     // writer.write_byte(b'H');
+//     // writer.write_string("Hello ");
+//     // writer.write_string("Tkern!");
+//
+//     use core::fmt::Write;
+//     let mut writer = Writer {
+//         column_position: 0,
+//         color_code: ColorCode::new(Color::Yellow, Color::Black),
+//         buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
+//     };
+//
+//     writer.write_byte(b'H');
+//     writer.write_string("Wotcha! ");
+//     write!(writer, "The numbers are {} and {}", 42, 1.0/3.0).unwrap();    
+// }
 
