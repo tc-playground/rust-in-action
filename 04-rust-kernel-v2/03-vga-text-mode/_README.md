@@ -22,9 +22,18 @@
     
     4. CPU instructions used to access the memory can also be used for accessing devices.
 
-2. Encapsulate `unsafe` memory screen buffer operations behind an interface.
+3. Encapsulate `unsafe` memory `screen buffer` operations behind an interface.
 
-3. 
+4. Uses `volatile` methods (via `volatile` crate) to prevent compiler optimisations breaking VGA memory-mapped IO  write operations.
+
+5. Implement `core::fmt::Write` trait to provide `formatted print` operations.
+
+6. Provides a single static global instance of the VGA buffer `Writer` interface:
+
+    1. Provide and instance of `Writer` that can be used from other modules without carrying an instance around.
+
+    1. 
+
 
 ---
 
