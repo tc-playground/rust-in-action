@@ -31,4 +31,6 @@
 
 ## References
 
+* [Unsafe Rust](https://doc.rust-lang.org/book/ch19-01-unsafe-rust.html)
+
 * [Rust `unsafe` Docs](https://doc.rust-lang.org/stable/book/ch19-01-unsafe-rust.html#unsafe-superpowers)
