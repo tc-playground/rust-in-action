@@ -1,8 +1,10 @@
 {
     "cSpell.words": [
+        "Isize",
         "LLVM",
         "Multiboot",
         "UEFI",
+        "Usize",
         "aliasable",
         "alloc",
         "androideabi",
