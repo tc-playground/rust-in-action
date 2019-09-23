@@ -21,6 +21,7 @@
         "repr",
         "rustc",
         "rustflags",
+        "spinlocks",
         "struct",
         "thumbv",
         "tkern",
