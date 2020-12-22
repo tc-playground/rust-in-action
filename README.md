@@ -12,4 +12,4 @@ A rusty junkyard of code scraps obtained from various resources.
 
 * [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
 
-* [Rust in Action](https://www.manning.com/books/rust-in-action)
+* [Rust in Action](https://www.manning.com/books/rust-in-actiontatus)
